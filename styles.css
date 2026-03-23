@@ -9,6 +9,11 @@
   padding: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   --navy:       #0d1f3c;
   --navy-dark:  #081529;
