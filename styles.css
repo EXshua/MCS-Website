@@ -1336,6 +1336,155 @@ td.check-no { color: var(--mid-grey); font-size: 1.1rem; }
 }
 
 /* ============================================================
+   PRICING
+   ============================================================ */
+
+.pricing {
+  padding: var(--section-pad);
+  background: var(--off-white);
+}
+
+.pricing-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pricing-inner > div:first-child {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.pricing-card {
+  background: var(--white);
+  border: 1.5px solid var(--light-grey);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--teal-light);
+}
+
+.pricing-featured {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-md);
+  transform: scale(1.05);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: var(--teal);
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-header h3 {
+  font-size: 1.4rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.pricing-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 24px;
+}
+
+.pricing-amount {
+  margin: 28px 0;
+  padding: 20px 0;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+  text-align: center;
+}
+
+.price {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--teal);
+  line-height: 1;
+}
+
+.period {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+.pricing-features {
+  list-style: none;
+  margin: 28px 0;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  padding: 10px 0;
+  font-size: 0.92rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  content: '';
+  margin-right: 8px;
+}
+
+.pricing-card .btn {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.pricing-note {
+  text-align: center;
+  padding: 24px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--light-grey);
+}
+
+.pricing-note p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+}
+
+.pricing-note a {
+  color: var(--teal);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pricing-note a:hover {
+  color: var(--teal-dark);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 
@@ -1357,6 +1506,8 @@ td.check-no { color: var(--mid-grey); font-size: 1.1rem; }
   .tiers-grid { grid-template-columns: 1fr; max-width: 480px; }
   .vessels-grid { grid-template-columns: 1fr 1fr; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-featured { transform: scale(1); }
 
   .tier-full { grid-template-columns: 1fr; }
   .tier-full-list { grid-template-columns: 1fr; }
